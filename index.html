@@ -125,7 +125,7 @@
     </div>
 
     <script>
-                function appendToDisplay(value) {
+        function appendToDisplay(value) {
             document.getElementById("display").value += value || '';
         }
 
@@ -146,6 +146,7 @@
             }
         }
         function calculateFactorial() {
+            var currentInput = eval(document.getElementById("display").value);
             try {
                 const num = parseInt(currentInput);
                 if (num < 0) {
@@ -158,11 +159,10 @@
                 }
 
                 currentInput = result.toString();
-                updateDisplay();
             } catch (error) {
                 currentInput = 'Error';
-                updateDisplay();
             }
+            document.getElementById("display").value = currentInput;
         }
         function powerOfTwo() {
             appendToDisplay('**2');
