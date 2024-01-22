@@ -73,25 +73,24 @@
     <input type="button" value="0" onclick="appendToDisplay('0')">
     <input type="button" value="." onclick="appendToDisplay('.')">
     <input type="button" value="=" onclick="calculate()">
-    
     <input type="button" value="C" onclick="clearDisplay()">
+    <input type="button" value="←" onclick="deleteLastCharacter()">
 </div>
 
 <script>
     function appendToDisplay(value) {
-        document.getElementById("display").value += value;
+        //Implement logic to append
     }
 
     function clearDisplay() {
-        document.getElementById("display").value = "";
+       //Implement logic to clear
     }
 
     function calculate() {
-        try {
-            document.getElementById("display").value = eval(document.getElementById("display").value);
-        } catch (error) {
-            document.getElementById("display").value = "Error";
-        }
+        //Implement logic to calculate
+    }
+    function deleteLastCharacter() {
+        //Implement logic to delete last char
     }
 </script>
     <!-- special scripts for integration in MTW gallery - must be placed at the bottom of the HTML after your code -->
